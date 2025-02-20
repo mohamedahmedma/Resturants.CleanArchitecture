@@ -1,0 +1,49 @@
+
+@host = http://localhost
+@port = 5237
+@token = CfDJ8B5IhUMOXVRMmyxwseNmzWJX1neon5gE-EovfyDR3un4LSYo-ZNn7uwe2QvWnFHKeshE2X4TBX1g2mXVoLieV7jHy8uZUirK03hU3rdaDoOCZ6OxOUH8x7gBARon-BvWCexA-yrntiLToYcu4s-I5VMXSrGuM1Ld1dyCMyM_A8E07VXlkffwV26Q3-DwPsKnFuSONuqOk2ksbzdPByMwZ_atkNpdwxyXKD_pKCQS4IK8S7FkWaYNoghkLe2qvyBlN9NIZGS1ryPhi0OOJZZOAjTW0nxQ-qbkA57LKVJa1dOB7yFw0bJvFkzribJg0ITOiSXPblZskL3-_TL_8iFpD4PBSMkO1jWpShRKGEBkpqmcmBmu78SWeURUdXD5kPb-WfVTe2B6iwh4Rmq7bhIiHzrGJ9IUvSbP7NvN7MeflYOaYOYF48Irlqdc37mW9RitwLn82TqMOE-3VAXdbpbniI6zfmnNjV8IPgO6bn48lKd7V1KLZzxiAaXX1HSu_pyN0G2SlLps-0pmPpY3UaB7PN6GWTiS06CG_3czzX0RO_I6DWDE61yyd8EFyp7lfEMvVtwj8TpY623nh-Gq8g9qttoXafJ2ewT0rYPn83MQGmUDY2qu97w0w1Z9orNhNSCKg05eVhi3C77aI2GTqwlThAJLBmEVHx09zeMpo0I8HxheYJHPt15c2uu0F0amPlTUOgxjYZAQ11DYoL8yq2v7p6btM1v2RhtteeN315qZ89Q4NLX1xRiVGtF-K9AiOuitaNkEmDcSLdqxyUrovK1iDUNXJVnj9WAnZzTVTcLMDQsB
+@ResturantsAPI_HostAddress = {{host}}:{{port}}
+
+GET {{ResturantsAPI_HostAddress}}/WeatherForecast/
+Accept: application/json
+LocalDate: $datetime iso8601
+Guid: {{$guid}}
+Random-int: {{$randomInt}}
+# ProjectUrl : {{$projectUrl}}
+
+###
+
+# POST {{ResturantsAPI_HostAddress}}/WeatherForecast
+# Content-Type: application/json
+# {
+#   "email" : "test@tes.com"
+# }
+
+
+# POST {{ResturantsAPI_HostAddress}}/api/restaurants
+# Content-Type: application/json
+# {
+#   "name": "momo",
+#   "description": "smpomtring",
+#   "category": "strfpoasming",
+#   "hasDelivery": true,
+#   "contactEmail": "stpweofmring@gmial.com",
+#   "contactNumber": "103223",
+#   "city": "cairo",
+#   "street": "13hasfnl",
+#   "postalCode": "102390"
+# }
+
+
+POST {{ResturantsAPI_HostAddress}}/api/identity/login
+Content-Type: application/json
+{
+   "email": "user@gmail.com",
+   "password": "Password1!"
+}
+
+
+GET {{ResturantsAPI_HostAddress}}/api/restaurants
+
+###
+

@@ -7,6 +7,7 @@ using Restaurant.Domain.Entites;
 using Microsoft.Extensions.Logging;
 using Restaurant.Application.Users;
 using FluentAssertions;
+using Restaurant.Domain.Interfaces;
 
 namespace Restaurant.Application.Restaurant.Commands.CreateRestaurant.Tests
 {
@@ -23,6 +24,8 @@ namespace Restaurant.Application.Restaurant.Commands.CreateRestaurant.Tests
             var command = new CreateRestaurantCommand();
 
             var restaurant = new Restaurants();
+
+            var restaurantAuth = new Mock<IRestaurantAuthorizationService>();
 
             mapperMock.Setup(m => m.Map<Restaurants>(command)).Returns(restaurant);
 
@@ -41,7 +44,10 @@ namespace Restaurant.Application.Restaurant.Commands.CreateRestaurant.Tests
                 , mapperMock.Object 
                 , restaurantRepositoryMock.Object
                 , userContextMock.Object
-                , null);
+                , restaurantAuth.Object);
+
+            restaurantAuth.Setup(u => u.Authorize(restaurant, Domain.Contants.ResourceOperation.Create))
+                .Returns(true);
 
             //act 
             var result = await commandHandler.Handle(command , CancellationToken.None);

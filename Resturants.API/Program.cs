@@ -1,7 +1,5 @@
 using Restaurant.Infrastructure.Extensions;
 using Restaurant.Infrastructure.Seeders;
-using Restaurant.Infrastructure.Extensions;
-using Restaurant.Infrastructure.Seeders;
 using Resturants.API.Extensions;
 using Resturants.API.Middlewares;
 using Serilog;

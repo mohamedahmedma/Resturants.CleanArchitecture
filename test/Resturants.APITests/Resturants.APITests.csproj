@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Resturants.API\Resturants.API.csproj" />
-    <ProjectReference Include="..\..\src\Resturants.API\Resturants.API.csproj" />
   </ItemGroup>
 
   <ItemGroup>
